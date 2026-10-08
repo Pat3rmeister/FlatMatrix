@@ -42,7 +42,13 @@ int main() {
         // TODO: Create a second matrix. It may have any values you choose
         //       and should be configured so that matrix multiplication may
         //       be performed.
-        Matrix1<int> mat2 ...
+        Matrix1<int> mat2(mat1.cols(), 2, 1);
+        mat2(0, 0) = 1;
+        mat2(0, 1) = 2;
+        mat2(1, 0) = 3;
+        mat2(1, 1) = 4;
+        mat2(2, 0) = 5;
+        mat2(2, 1) = 6;
 
         std::cout << "Matrix A :\n"; mat1.print();
         std::cout << "\nMatrix B :\n"; mat2.print();
