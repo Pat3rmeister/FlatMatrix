@@ -12,6 +12,8 @@ parameters like matrix(row, col).
 Const Correctness: Both operator() and individual methods like print() have duplicated
 const variations. This allows the Matrix instances to be safely passed around as
 read-only references (const Matrix<T>&).
+
+
 */
 
 #include "matrix1.h"
