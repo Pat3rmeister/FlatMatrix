@@ -24,7 +24,7 @@ public:
     // Constructor
     // TODO: Constructor with third optional parameter.
     //       Use an initialization list.
-    Matrix1
+    Matrix1(size_t rows, size_t cols, const T& value = T()) : m_rows(rows), m_cols(cols), m_data(rows * cols, value) {}
 
     // Getters
     size_t rows() const { return m_rows; }
