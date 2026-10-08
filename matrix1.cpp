@@ -20,7 +20,13 @@ read-only references (const Matrix<T>&).
 int main() {
     try {
         // TODO: Initialize a 2x3 matrix with different initial values
-
+        Matrix1<size_t> matrix(2, 3);
+        matrix(0, 0) = 1;
+        matrix(0, 1) = 2;
+        matrix(0, 2) = 3;
+        matrix(1, 0) = 4;
+        matrix(1, 1) = 5;
+        matrix(1, 2) = 6;
 
         // TODO: Create a 2x3 matrix: 1,2,3 (row1) and 4,5,6 (row2).
         Matrix1<int> mat1 ...
