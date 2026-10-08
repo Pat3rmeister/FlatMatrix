@@ -74,11 +74,11 @@ public:
         Matrix1<T> result(m_rows, other.m_cols, T(0));
 
         // TODO: Analyze Cache-friendly loop order (i, k, j) to optimize data locality
-        for (size_t i = 0; i < m_rows; ++i) {
-            for (size_t k = 0; k < m_cols; ++k) {
-                T temp = (*this)(i, k);
-                for (size_t j = 0; j < other.m_cols; ++j) {
-                    result(i, j) += temp * other(k, j);
+        for (size_t i = 0; i < m_rows; ++i) { //   2n+2
+            for (size_t k = 0; k < m_cols; ++k) { //n(2n+2)
+                T temp = (*this)(i, k); // n^2
+                for (size_t j = 0; j < other.m_cols; ++j) { //n^2 (2n+2)
+                    result(i, j) += temp * other(k, j); //n^3
                 }
             }
         }
